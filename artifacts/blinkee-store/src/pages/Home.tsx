@@ -65,9 +65,9 @@ export default function Home() {
                   Enter Shop <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Link href="/shop?category=wearables">
+              <Link href="/shop?category=Eyewear">
                 <Button size="lg" variant="outline" className="h-14 px-8 border-secondary text-secondary hover:bg-secondary hover:text-white font-display font-bold tracking-widest uppercase neon-box-pink transition-all bg-transparent w-full sm:w-auto">
-                  View Wearables
+                  View Eyewear
                 </Button>
               </Link>
             </motion.div>
@@ -166,7 +166,7 @@ export default function Home() {
               ))
             ) : (
               categories?.map((cat, index) => (
-                <Link key={cat.slug} href={`/shop?category=${cat.slug}`}>
+                <Link key={cat.slug} href={`/shop?category=${encodeURIComponent(cat.name)}`}>
                   <motion.div
                     whileHover={{ y: -5, scale: 1.02 }}
                     className="h-full"

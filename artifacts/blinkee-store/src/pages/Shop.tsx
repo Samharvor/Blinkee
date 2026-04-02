@@ -96,8 +96,8 @@ export default function Shop() {
           {categories?.map((cat) => (
             <button 
               key={cat.slug}
-              onClick={() => setCategory(cat.slug)}
-              className={`text-left px-3 py-2 rounded text-sm tracking-wider uppercase font-display flex justify-between items-center transition-all ${category === cat.slug ? 'bg-primary/20 text-primary border-l-2 border-primary neon-box-cyan' : 'text-muted-foreground hover:bg-white/5 hover:text-white border-l-2 border-transparent'}`}
+              onClick={() => setCategory(cat.name)}
+              className={`text-left px-3 py-2 rounded text-sm tracking-wider uppercase font-display flex justify-between items-center transition-all ${category === cat.name ? 'bg-primary/20 text-primary border-l-2 border-primary neon-box-cyan' : 'text-muted-foreground hover:bg-white/5 hover:text-white border-l-2 border-transparent'}`}
             >
               <span>{cat.name}</span>
               <span className="text-[10px] bg-background/50 px-1.5 py-0.5 rounded opacity-70">{cat.count}</span>

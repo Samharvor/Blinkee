@@ -219,6 +219,49 @@
     border-color: rgba(255, 0, 170, 0.8);
   }
 
+  /* Logo permanent glow */
+  .logo-glow {
+    text-shadow:
+      0 0 6px rgba(0, 255, 255, 0.9),
+      0 0 14px rgba(0, 255, 255, 0.7),
+      0 0 28px rgba(0, 255, 255, 0.4);
+  }
+
+  /* Discount badge — neon lime */
+  .badge-lime {
+    background: #aaff00;
+    color: #080b14;
+    box-shadow: 0 0 8px rgba(170, 255, 0, 0.7), 0 0 16px rgba(170, 255, 0, 0.4);
+  }
+
+  /* Category-keyed image pulse glow animations */
+  @keyframes pulse-glow-pink {
+    0%, 100% { box-shadow: 0 0 14px 2px rgba(255, 0, 170, 0.45); }
+    50%       { box-shadow: 0 0 28px 6px rgba(255, 0, 170, 0.75); }
+  }
+  @keyframes pulse-glow-cyan {
+    0%, 100% { box-shadow: 0 0 14px 2px rgba(0, 255, 255, 0.45); }
+    50%       { box-shadow: 0 0 28px 6px rgba(0, 255, 255, 0.75); }
+  }
+  @keyframes pulse-glow-purple {
+    0%, 100% { box-shadow: 0 0 14px 2px rgba(170, 0, 255, 0.45); }
+    50%       { box-shadow: 0 0 28px 6px rgba(170, 0, 255, 0.75); }
+  }
+  @keyframes pulse-glow-lime {
+    0%, 100% { box-shadow: 0 0 14px 2px rgba(170, 255, 0, 0.45); }
+    50%       { box-shadow: 0 0 28px 6px rgba(170, 255, 0, 0.75); }
+  }
+  @keyframes pulse-glow-green {
+    0%, 100% { box-shadow: 0 0 14px 2px rgba(0, 255, 100, 0.45); }
+    50%       { box-shadow: 0 0 28px 6px rgba(0, 255, 100, 0.75); }
+  }
+
+  .img-glow-pink   { animation: pulse-glow-pink   2.4s ease-in-out infinite; }
+  .img-glow-cyan   { animation: pulse-glow-cyan   2.4s ease-in-out infinite; }
+  .img-glow-purple { animation: pulse-glow-purple 2.4s ease-in-out infinite; }
+  .img-glow-lime   { animation: pulse-glow-lime   2.4s ease-in-out infinite; }
+  .img-glow-green  { animation: pulse-glow-green  2.4s ease-in-out infinite; }
+
 }
 
 /**
