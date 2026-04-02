@@ -25,3 +25,25 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - `pnpm --filter @workspace/api-server run dev` — run API server locally
 
 See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.
+
+## Artifacts
+
+### Blinkee.com LED Toys Store (`artifacts/blinkee-store`)
+- Full-stack e-commerce store at `/` (root path)
+- Cyberpunk Dark Mode theme with neon cyan, hot pink, and electric yellow-green accents
+- Orbitron font for headings, Rajdhani for body
+- Pages: Home (`/`), Shop (`/shop`), Product Detail (`/product/:id`), Cart (`/cart`)
+- 24 seeded LED toy products across 8 categories
+- Functional shopping cart with session-based persistence
+
+### API Server (`artifacts/api-server`)
+- REST API at `/api`
+- Routes: `/api/products`, `/api/products/featured`, `/api/products/categories`, `/api/products/:id`, `/api/cart`, `/api/store/stats`
+
+## Database Schema
+
+### `products`
+- id, name, description, price, original_price, category, image_url, stock, rating, review_count, is_featured, tags[], badge
+
+### `cart_items`
+- id, session_id, product_id (FK → products), quantity, created_at, updated_at
